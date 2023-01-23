@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def client():
-    return "<p>Thuis, sweet home.</p>"
+    return "<p>Thuiss, sweet home.</p>"
 
 @app.route("/greet/")
 def grt():
