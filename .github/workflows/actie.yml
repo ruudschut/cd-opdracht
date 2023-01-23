@@ -23,13 +23,10 @@ jobs:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v0.1.4
         with:
-          host: ${{ secrets.SSHIP }}
-          key: ${{ secrets.SSHKEY }}
-          username: ${{ secrets.SSHSUSER }}
-          port: ${{ secrets.SSHPORT }}
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          username: ${{ secrets.SSHS_USERNAME }}
           script: |
             cd /home/cd
-            echo 'Entering /home/cd directory'
-            git pull
-            echo 'Repository has been pulled'
+            touch foo.txt
             systemctl restart nginx
