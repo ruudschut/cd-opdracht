@@ -28,5 +28,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
             cd /home/cd
-            git clone git@github.com:ruudschut/cd-opdracht.git
+            git pull
             systemctl restart nginx
