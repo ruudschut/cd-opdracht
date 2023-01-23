@@ -28,5 +28,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
             cd /home/cd
-            touch fooo.txt
+            touch foooo.txt
             systemctl restart nginx
